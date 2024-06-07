@@ -4,13 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.WriteLine(Add(0, 1, true));
         }
         public static int Add(int a, int b)
         {
             return a + b;
         }
-        public static decimal Add(decimal a, decimal b)
+        public static double Add(double a, double b)
         {
             return a + b;
         }
@@ -24,9 +24,9 @@
             {
                 return $"{a + b} dollars";
             }*/
-            if (c)
+            if (c == true)
             {
-                return ((a + b) > 1) ? a + b + "dollars" : "dollar";
+                return ((a + b) > 1) ? $"${a + b}" + " dollars" : "$1 dollar";
             }
             return $"{a + b}";
         }
